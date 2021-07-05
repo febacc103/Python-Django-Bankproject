@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+           body{
+                background-image:url("{%static 'images/bank2.jpg'%}");
+                background-size:cover;
+                color:white;
+
+
+               }
+        h1{
+        color:blue;
+        }
+        div{
+        text-color:white;
+        }
+
+
+    </style>
+</head>
+<body>
+<h1 align="center" >REGISTER HERE</h1>
+<div class="container" align="center">
+<form action="" method="post">
+
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Register">
+</form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+          background-image:url("{%static 'images/bank3.jpg'%}");
+         background-size:cover;
+        }
+        h1{
+        color:yellow;
+        }
+        a{
+        color:white;
+        }
+        h2{
+        color:red;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<h1 align="center">HOME PAGE</h1>
+<div class="container" align="center">
+    <a href="{%url 'balance'%}">balance enguiry</a><br>
+    <a href="{%url 'transaction'%}">fund transfer</a> <br>
+    <a href="{%url 'payment'%}">payment history</a><br>
+    <a href="{%url 'filter'%}">Filter Transaction</a><br>
+    <a href="{%url 'logout'%}">logout</a>
+    <div>
+        {%if balance%}
+        <h2>{{balance}}</h2>
+        {%endif%}
+    </div>
+</div>
+</body>
+</html>
